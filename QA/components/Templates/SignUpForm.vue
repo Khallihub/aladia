@@ -113,7 +113,7 @@
             </div>
         </div>
 
-        <SubmitButton :handle-click="handleClick" />
+        <AtomsSubmitButton :handle-click="handleClick" />
 
         <p class="text-center text-sm text-gray-500 mb-1">
             <a href="#" class="hover:text-gray-400 cursor-pointer text-center text-white/40" data-test="sign_up-terms-link">Terms & Conditions</a>
@@ -128,11 +128,13 @@ import { useAuthStore } from '~/stores/AuthStore';
 
 const authStore = useAuthStore();
 const profileImage = ref({ src: null });
-const touchedName = ref(false);
-const touchedSurname = ref(false);
-const touchedEmail = ref(false);
-const touchedPassword = ref(false);
-const touchedConfirmPassword = ref(false);
+import { computed } from 'vue';
+
+const touchedName = computed(() => !!authStore.Name);
+const touchedSurname = computed(() => !!authStore.Surname);
+const touchedEmail = computed(() => !!authStore.Email);
+const touchedPassword = computed(() => !!authStore.Password);
+const touchedConfirmPassword = computed(() => !!authStore.ConfirmPassword);
 
 function previewImage(event) {
     const file = event.target.files[0];

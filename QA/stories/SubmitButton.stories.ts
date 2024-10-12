@@ -1,25 +1,33 @@
 import type { Meta, StoryFn } from '@storybook/vue3';
-import SubmitButton from '../components/SubmitButton.vue'; // Adjust path according to your project
+import SubmitButton from '~/components/Atoms/SubmitButton.vue';
+import { useAuthStore } from '~/stores/AuthStore';
 
 export default {
-  title: 'Components/SubmitButton',
+  title: 'Components/Atoms/SubmitButton',
   component: SubmitButton,
-  argTypes: {
-    handleClick: { action: 'clicked' },
-    default: { control: 'text', description: 'Slot content for the button text' }
-  },
 } as Meta<typeof SubmitButton>;
 
 const Template: StoryFn<typeof SubmitButton> = (args) => ({
   components: { SubmitButton },
   setup() {
-    return { args };
+    const authStore = useAuthStore();
+
+    const handleClick = () => {
+      authStore.loading = !authStore.loading;
+    };
+
+    return { authStore, handleClick, args };
   },
-  template: '<SubmitButton v-bind="args">{{ args.default }}</SubmitButton>',
+  template: '<SubmitButton v-bind="args" :handle-click="handleClick" />',
 });
 
+// Default Story: Normal button
 export const Default = Template.bind({});
-Default.args = {
-  default: 'Enter',
-  handleClick: () => { console.log('Button clicked'); }
+Default.args = {};
+
+// Loading Story: Button in loading state
+export const Loading = Template.bind({});
+Loading.play = async ({ args }) => {
+  const authStore = useAuthStore();
+  authStore.loading = true;
 };

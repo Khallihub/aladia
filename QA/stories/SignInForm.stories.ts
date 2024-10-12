@@ -1,9 +1,9 @@
 import type { Meta, StoryFn } from '@storybook/vue3';
-import SignInForm from '~/components/SignInForm.vue';
+import SignInForm from '~/components/Templates/SignInForm.vue';
 import { useAuthStore } from '~/stores/AuthStore';
 
 export default {
-  title: 'Components/SignInForm',
+  title: 'Components/Templates/SignInForm',
   component: SignInForm,
 } as Meta<typeof SignInForm>;
 
@@ -12,27 +12,18 @@ const Template: StoryFn<typeof SignInForm> = () => ({
   setup() {
     const authStore = useAuthStore();
 
-    authStore.Email = 'test@example.com';
-    authStore.errors = {
-      Name: "",
-      Surname: "",
-      Email: "",
-      ConfirmPassword: "",
-      Password: "",
-    };
-
     const handleSocialClick = (id: number) => {
       console.log('Social login clicked:', id);
     };
 
     const updateEmail = (value: string) => {
       authStore.Email = value;
-      authStore.errors.Email = '';
+      authStore.errors.Email = ''; 
     };
 
     const handleSubmit = () => {
-      if (!authStore.Email) {
-        authStore.errors.Email = 'Email is required';
+      if (!authStore.Email || authStore.errors.Email) {
+        authStore.errors.Email = authStore.Email ? 'Invalid email format' : 'Email is required';
       } else {
         console.log('Email Submitted:', authStore.Email);
       }
@@ -43,5 +34,26 @@ const Template: StoryFn<typeof SignInForm> = () => ({
   template: '<SignInForm />',
 });
 
-// Default Story
+// Default Story: Empty email input
 export const Default = Template.bind({});
+Default.play = () => {
+  const authStore = useAuthStore();
+  authStore.Email = ''; // Empty email
+  authStore.errors.Email = ''; // No error
+};
+
+// Filled Story: Pre-filled valid email input
+export const Filled = Template.bind({});
+Filled.play = () => {
+  const authStore = useAuthStore();
+  authStore.Email = 'test@example.com'; // Valid email
+  authStore.errors.Email = ''; // No error
+};
+
+// Invalid Email Story: Pre-filled invalid email, with error
+export const InvalidEmail = Template.bind({});
+InvalidEmail.play = () => {
+  const authStore = useAuthStore();
+  authStore.Email = 'invalid-email'; // Invalid email
+  authStore.errors.Email = 'Invalid email format'; // Error message for invalid email
+};

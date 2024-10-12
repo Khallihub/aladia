@@ -3,13 +3,13 @@
       <div class="bg-black w-screen h-screen flex justify-center items-center">
         <div class="border border-[#ffffff1a] w-fit rounded-md">
           <div v-if="authStore.page === 0 && !authStore.confirmEmail">
-            <SignInForm />
+            <TemplatesSignInForm />
           </div>
           <div v-if="authStore.page === 1 && !authStore.confirmEmail">
-            <SignUpForm />
+            <TemplatesSignUpForm />
           </div>
           <div v-if="authStore.confirmEmail">
-            <SignUpConfirmation />
+            <TemplatesSignUpConfirmation />
           </div>
         </div>
       </div>

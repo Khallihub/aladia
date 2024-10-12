@@ -2,7 +2,7 @@
     <div class="h-[598px] max-w-[374px] p-5 flex-col items-center justify-between bg-black text-white space-y-4">
         <!-- Logo and Welcome Text -->
         <div class="w-full flex justify-center">
-            <WelcomeCard />
+            <AtomsWelcomeCard />
         </div>
 
         <p class="w-full text-center text-sm font-semibold" data-test="sign_in-info">
@@ -16,12 +16,12 @@
                     class="w-full" 
                     placeholder="Email Address" 
                     :prefix-icon="Message"
-                    :error="authStore.errors.Email"
+                    :error="authStore.errors.Email?.length > 0"
                     @input="updateEmail"
                     data-test="sign_in-input"
                 />
-                <p v-if="authStore.errors.Email" class="text-red-500 text-xs" data-test="sign_in-error">{{ authStore.errors.Email }}</p>
-                <SubmitButton :handle-click="handleSubmit" />
+                <p v-if="authStore.errors.Email?.length > 0" class="text-red-500 text-xs" data-test="sign_in-error">{{ authStore.errors.Email }}</p>
+                <AtomsSubmitButton :handle-click="handleSubmit" />
             </div>
         </div>
 
@@ -34,9 +34,9 @@
 
         <!-- Social Login Buttons -->
         <div class="space-y-4" data-test="sign_in-socials">
-            <SocialLinks :svg="GoogleIcon" text="Continue with Google&nbsp;&nbsp;&nbsp;&nbsp;" @click="handleSocialClick(1)" />
-            <SocialLinks :svg="FaceBookIcon" text="Continue with Facebook" @click="handleSocialClick(2)" />
-            <SocialLinks :svg="AppleIcon" text="Continue with Apple&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" @click="handleSocialClick(3)" />
+            <AtomsSocialLinks :svg="GoogleIcon" text="Continue with Google&nbsp;&nbsp;&nbsp;&nbsp;" @click="handleSocialClick(1)" />
+            <AtomsSocialLinks :svg="FaceBookIcon" text="Continue with Facebook" @click="handleSocialClick(2)" />
+            <AtomsSocialLinks :svg="AppleIcon" text="Continue with Apple&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" @click="handleSocialClick(3)" />
         </div>
 
         <!-- Terms and Conditions -->
@@ -50,9 +50,8 @@
 import AppleIcon from '~/assets/Icons/SocialIcons/AppleIcon.vue';
 import FaceBookIcon from '~/assets/Icons/SocialIcons/FaceBookIcon.vue';
 import GoogleIcon from '~/assets/Icons/SocialIcons/GoogleIcon.vue';
-import SocialLinks from '~/components/SocialLinks.vue';
 import { Message } from '@element-plus/icons-vue';
-import WelcomeCard from '~/components/WelcomeCard.vue';
+import WelcomeCard from '~/components/Atoms/WelcomeCard.vue';
 import { useAuthStore } from '~/stores/AuthStore';
 
 const authStore = useAuthStore();
