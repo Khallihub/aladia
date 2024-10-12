@@ -90,6 +90,7 @@ InvalidEmail.play = () => {
     Password: '',
     ConfirmPassword: ''
   };
+  authStore.touched.Email = true;
 };
 
 // Password Mismatch Story: Pre-filled valid inputs with mismatched passwords
@@ -108,4 +109,5 @@ PasswordMismatch.play = () => {
     Password: '',
     ConfirmPassword: 'Passwords do not match'
   };
+  authStore.touched.ConfirmPassword = true;
 };

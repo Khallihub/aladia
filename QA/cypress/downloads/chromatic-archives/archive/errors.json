@@ -1,1 +1,0 @@
-{"errors":{"http://0.0.0.0:3000/_nuxt/":{"error":{"request":{"method":"Fetch.continueRequest","params":{"requestId":"interception-job-5613.0","interceptResponse":true}},"response":{"code":-32602,"message":"Invalid InterceptionId."}}}}}

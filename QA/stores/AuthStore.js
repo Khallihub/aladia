@@ -18,6 +18,13 @@ export const useAuthStore = defineStore('auth', () => {
     Password:  '',
     ConfirmPassword: ''
   });
+  const touched = ref({
+    Name: false,
+    Surname: false,
+    Email: false,
+    Password: false,
+    ConfirmPassword: false
+  })
 
   const toggleLoading = () => {
     loading.value = !loading.value;
@@ -35,7 +42,7 @@ export const useAuthStore = defineStore('auth', () => {
     errors.value = {
       Name: Name.value ? null : 'Name is required',
       Surname: Surname.value ? null : 'Surname is required',
-      Email: validateEmail(), // Call validateEmail for email validation
+      Email: validateEmail(), 
       Password: Password.value.length >= 6 ? null : 'Password must be at least 6 characters',
       ConfirmPassword: Password.value === ConfirmPassword.value ? null : 'Passwords do not match',
     };
@@ -66,6 +73,7 @@ export const useAuthStore = defineStore('auth', () => {
     confirmEmailPage,
     validate,
     validateEmail,
-    confirmationCode
+    confirmationCode,
+    touched
   };
 });

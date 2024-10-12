@@ -50,11 +50,11 @@
                     class="w-full" 
                     placeholder="Name" 
                     :prefix-icon="User" 
-                    @focus="touchedName = true"
+                    @focus="authStore.touched.Name = true"
                     @input="resetError('Name')" 
                     data-test="sign_up-name-input"
                 />
-                <p v-if="touchedName && authStore.errors.Name" class="text-red-500 text-xs" data-test="sign_up-name-input-error">{{ authStore.errors.Name }}</p>
+                <p v-if="authStore.touched.Name && authStore.errors.Name" class="text-red-500 text-xs" data-test="sign_up-name-input-error">{{ authStore.errors.Name }}</p>
             </div>
 
             <div>
@@ -63,11 +63,11 @@
                     class="w-full" 
                     placeholder="Surname" 
                     :prefix-icon="User" 
-                    @focus="touchedSurname = true"
+                    @focus="authStore.touched.Surname = true"
                     @input="resetError('Surname')" 
                     data-test="sign_up-surname-input"
                 />
-                <p v-if="touchedSurname && authStore.errors.Surname" class="text-red-500 text-xs" data-test="sign_up-surname-input-error">{{ authStore.errors.Surname }}</p>
+                <p v-if="authStore.touched.Surname && authStore.errors.Surname" class="text-red-500 text-xs" data-test="sign_up-surname-input-error">{{ authStore.errors.Surname }}</p>
             </div>
 
             <div>
@@ -76,12 +76,12 @@
                     class="w-full" 
                     placeholder="Email" 
                     :prefix-icon="Message" 
-                    @focus="touchedEmail = true"
+                    @focus="authStore.touched.Email = true"
                     @input="resetError('Email')" 
                     data-test="sign_up-email-input"
 
                 />
-                <p v-if="touchedEmail && authStore.errors.Email" class="text-red-500 text-xs" data-test="sign_up-email-input-error">{{ authStore.errors.Email }}</p>
+                <p v-if="authStore.touched.Email && authStore.errors.Email" class="text-red-500 text-xs" data-test="sign_up-email-input-error">{{ authStore.errors.Email }}</p>
             </div>
 
             <div>
@@ -90,12 +90,12 @@
                     class="w-full" 
                     placeholder="Password" 
                     :prefix-icon="Key" 
-                    @focus="touchedPassword = true"
+                    @focus="authStore.touched.Password = true"
                     @input="resetError('Password')" 
                     data-test="sign_up-password-input"
 
                 />
-                <p v-if="touchedPassword && authStore.errors.Password" class="text-red-500 text-xs" data-test="sign_up-password-input-error">{{ authStore.errors.Password }}</p>
+                <p v-if="authStore.touched.Password && authStore.errors.Password" class="text-red-500 text-xs" data-test="sign_up-password-input-error">{{ authStore.errors.Password }}</p>
             </div>
 
             <div>
@@ -104,12 +104,12 @@
                     class="w-full" 
                     placeholder="Confirm Password" 
                     :prefix-icon="Key" 
-                    @focus="touchedConfirmPassword = true"
+                    @focus="authStore.touched.ConfirmPassword = true"
                     @input="resetError('ConfirmPassword')" 
                     data-test="sign_up-confirm_password-input"
 
                 />
-                <p v-if="touchedConfirmPassword && authStore.errors.ConfirmPassword" class="text-red-500 text-xs" data-test="sign_up-confirm_password-input-error">{{ authStore.errors.ConfirmPassword }}</p>
+                <p v-if="authStore.touched.ConfirmPassword && authStore.errors.ConfirmPassword" class="text-red-500 text-xs" data-test="sign_up-confirm_password-input-error">{{ authStore.errors.ConfirmPassword }}</p>
             </div>
         </div>
 
@@ -128,13 +128,6 @@ import { useAuthStore } from '~/stores/AuthStore';
 
 const authStore = useAuthStore();
 const profileImage = ref({ src: null });
-import { computed } from 'vue';
-
-const touchedName = computed(() => !!authStore.Name);
-const touchedSurname = computed(() => !!authStore.Surname);
-const touchedEmail = computed(() => !!authStore.Email);
-const touchedPassword = computed(() => !!authStore.Password);
-const touchedConfirmPassword = computed(() => !!authStore.ConfirmPassword);
 
 function previewImage(event) {
     const file = event.target.files[0];
@@ -148,8 +141,8 @@ function previewImage(event) {
 }
 
 const resetError = (field) => {
-    if (authStore.errors[field]) {
-        // Reset error state if the input changes
+    authStore.validate()
+    if (authStore.errors[field] === "") {
         authStore.errors[field] = null;
     }
 };
