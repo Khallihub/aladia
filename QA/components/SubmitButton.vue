@@ -1,5 +1,5 @@
 <template>
-  <button type="submit" @click="handleClick"
+  <button type="submit" @click="handleClick" data-test="submit_button"
     class="w-full px-4 py-2 rounded-md border bg-black border-black hover:border-white flex items-center justify-center
      hover:text-gray-400 cursor-pointer text-center text-white/40 font-semibold">
     <slot v-if="!authStore.loading">Enter</slot>

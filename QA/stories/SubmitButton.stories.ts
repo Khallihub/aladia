@@ -23,9 +23,3 @@ Default.args = {
   default: 'Enter',
   handleClick: () => { console.log('Button clicked'); }
 };
-
-export const CustomText = Template.bind({});
-CustomText.args = {
-  default: 'Submit',
-  handleClick: () => { console.log('Submit clicked'); }
-};

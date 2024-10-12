@@ -1,0 +1,16 @@
+import { createHotContext as __vite__createHotContext } from "/_nuxt/@vite/client";import.meta.hot = __vite__createHotContext("/pages/login/index.vue?macro=true");
+const __nuxt_page_meta = null
+export default __nuxt_page_meta
+
+// Vite
+if (import.meta.hot) {
+  import.meta.hot.accept(mod => {
+    Object.assign(__nuxt_page_meta, mod)
+  })
+}
+// webpack
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept((err) => {
+    if (err) { window.location = window.location.href }
+  })
+}

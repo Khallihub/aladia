@@ -11,11 +11,11 @@ export const useAuthStore = defineStore('auth', () => {
   const ConfirmPassword = ref('');
   const confirmEmail = ref(false);
   const errors = ref({
-    Name: null,
-    Surname: null,
-    Email: null,
-    Password: null,
-    ConfirmPassword: null,
+    Name: null || 'Name is required',
+    Surname: null || 'Surname is required',
+    Email: null || 'Invalid email',
+    Password: null || 'Password must be at least 6 characters',
+    ConfirmPassword: null || 'Passwords do not match'
   });
 
   const toggleLoading = () => {

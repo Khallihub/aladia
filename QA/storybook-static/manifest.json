@@ -1,0 +1,646 @@
+{
+  ".storybook/preview.ts": {
+    "file": "_nuxt/Cz3Oyk0n.js",
+    "name": "preview",
+    "src": ".storybook/preview.ts",
+    "isDynamicEntry": true,
+    "css": [
+      "_nuxt/main.ZJMYpaas.css"
+    ]
+  },
+  "_!~{00B}~.js": {
+    "file": "_nuxt/SignUpForm.COKqmPXp.css",
+    "src": "_!~{00B}~.js"
+  },
+  "_!~{00m}~.js": {
+    "file": "_nuxt/main.ZJMYpaas.css",
+    "src": "_!~{00m}~.js"
+  },
+  "_!~{00p}~.js": {
+    "file": "_nuxt/SubmitButton.DcdSe3fQ.css",
+    "src": "_!~{00p}~.js"
+  },
+  "_!~{00q}~.js": {
+    "file": "_nuxt/el-input.DOuI55mx.css",
+    "src": "_!~{00q}~.js"
+  },
+  "_68YM6oYl.js": {
+    "file": "_nuxt/68YM6oYl.js",
+    "name": "SignUpConfirmation",
+    "imports": [
+      "_ZlAkEr69.js",
+      "_CpPJmdYN.js",
+      "_Ccq5cmq1.js"
+    ]
+  },
+  "_B3b0gWGo.js": {
+    "file": "_nuxt/B3b0gWGo.js",
+    "name": "SignUpForm",
+    "imports": [
+      "_Dm1bvDNI.js",
+      "_ZlAkEr69.js",
+      "_CpPJmdYN.js",
+      "_D9rSyKX4.js",
+      "_DlAUqK2U.js"
+    ],
+    "css": [
+      "_nuxt/SignUpForm.COKqmPXp.css"
+    ],
+    "assets": [
+      "_nuxt/file_input.BnUbZXmy.png"
+    ]
+  },
+  "_B7IqD13D.js": {
+    "file": "_nuxt/B7IqD13D.js",
+    "name": "vue.f49591ad",
+    "imports": [
+      "_CpPJmdYN.js"
+    ]
+  },
+  "_BVDQJRw6.js": {
+    "file": "_nuxt/BVDQJRw6.js",
+    "name": "index"
+  },
+  "_BaXC8Uva.js": {
+    "file": "_nuxt/BaXC8Uva.js",
+    "name": "vue.8fc199ce",
+    "imports": [
+      "_CpPJmdYN.js",
+      "_B7IqD13D.js"
+    ]
+  },
+  "_CVPIwebV.js": {
+    "file": "_nuxt/CVPIwebV.js",
+    "name": "index"
+  },
+  "_CbI4lzGV.js": {
+    "file": "_nuxt/CbI4lzGV.js",
+    "name": "pinia",
+    "imports": [
+      "_CpPJmdYN.js"
+    ]
+  },
+  "_Ccq5cmq1.js": {
+    "file": "_nuxt/Ccq5cmq1.js",
+    "name": "logo",
+    "imports": [
+      "_D9rSyKX4.js"
+    ],
+    "assets": [
+      "_nuxt/logo.ChQ3biW9.png"
+    ]
+  },
+  "_CpPJmdYN.js": {
+    "file": "_nuxt/CpPJmdYN.js",
+    "name": "vue.esm-bundler"
+  },
+  "_Cs9wVCFg.js": {
+    "file": "_nuxt/Cs9wVCFg.js",
+    "name": "SocialLinks",
+    "imports": [
+      "_CpPJmdYN.js"
+    ]
+  },
+  "_CsZsf3Vu.js": {
+    "file": "_nuxt/CsZsf3Vu.js",
+    "name": "SignInForm",
+    "imports": [
+      "_Dm1bvDNI.js",
+      "_ZlAkEr69.js",
+      "_CpPJmdYN.js",
+      "_DlAUqK2U.js",
+      "_Cs9wVCFg.js",
+      "_VU8wUJ6S.js"
+    ]
+  },
+  "_D9rSyKX4.js": {
+    "file": "_nuxt/D9rSyKX4.js",
+    "name": "paths"
+  },
+  "_DlAUqK2U.js": {
+    "file": "_nuxt/DlAUqK2U.js",
+    "name": "_plugin-vue_export-helper"
+  },
+  "_Dm1bvDNI.js": {
+    "file": "_nuxt/Dm1bvDNI.js",
+    "name": "el-input",
+    "imports": [
+      "_CpPJmdYN.js"
+    ],
+    "css": [
+      "_nuxt/el-input.DOuI55mx.css"
+    ]
+  },
+  "_DoU5TKlD.js": {
+    "file": "_nuxt/DoU5TKlD.js",
+    "name": "index",
+    "imports": [
+      "iframe.html",
+      "_BVDQJRw6.js",
+      "_CVPIwebV.js",
+      "_DrFu-skq.js"
+    ],
+    "dynamicImports": [
+      "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/syntaxhighlighter-JOJW2KGS.mjs",
+      "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/syntaxhighlighter-JOJW2KGS.mjs",
+      "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/formatter-B5HCVTEV.mjs",
+      "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/WithTooltip-Y7J54OF7.mjs",
+      "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/WithTooltip-Y7J54OF7.mjs",
+      "node_modules/.pnpm/@storybook+blocks@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/blocks/dist/Color-RQJUDNI5.mjs"
+    ]
+  },
+  "_DrFu-skq.js": {
+    "file": "_nuxt/DrFu-skq.js",
+    "name": "index"
+  },
+  "_Dtb5mkr6.js": {
+    "file": "_nuxt/Dtb5mkr6.js",
+    "name": "entry",
+    "isDynamicEntry": true,
+    "imports": [
+      "_CpPJmdYN.js",
+      "_D9rSyKX4.js",
+      "_B7IqD13D.js",
+      "iframe.html",
+      "_CbI4lzGV.js",
+      "_DlAUqK2U.js"
+    ],
+    "dynamicImports": [
+      "pages/home/index.vue",
+      "pages/login/index.vue",
+      "node_modules/.pnpm/@nuxt+ui-templates@1.3.4/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
+      "node_modules/.pnpm/@nuxt+ui-templates@1.3.4/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
+    ],
+    "css": [
+      "_nuxt/main.ZJMYpaas.css"
+    ]
+  },
+  "_DyM18_-h.js": {
+    "file": "_nuxt/DyM18_-h.js",
+    "name": "index",
+    "imports": [
+      "_DoU5TKlD.js"
+    ]
+  },
+  "_QcKjftir.js": {
+    "file": "_nuxt/QcKjftir.js",
+    "name": "v4",
+    "imports": [
+      "_CVPIwebV.js"
+    ]
+  },
+  "_VU8wUJ6S.js": {
+    "file": "_nuxt/VU8wUJ6S.js",
+    "name": "WelcomeCard",
+    "imports": [
+      "_CpPJmdYN.js",
+      "_Ccq5cmq1.js",
+      "_DlAUqK2U.js"
+    ]
+  },
+  "_ZlAkEr69.js": {
+    "file": "_nuxt/ZlAkEr69.js",
+    "name": "SubmitButton",
+    "imports": [
+      "_CpPJmdYN.js",
+      "_CbI4lzGV.js",
+      "_DlAUqK2U.js"
+    ],
+    "css": [
+      "_nuxt/SubmitButton.DcdSe3fQ.css"
+    ]
+  },
+  "iframe.html": {
+    "file": "_nuxt/B8G9QtPs.js",
+    "name": "iframe",
+    "src": "iframe.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "stories/Configure.mdx",
+      "stories/MyNuxtWelcome.stories.ts",
+      "stories/SignInForm.stories.ts",
+      "stories/SignUpConfirmation.stories.ts",
+      "stories/SignUpForm.stories.ts",
+      "stories/SocialLinks.stories.ts",
+      "stories/SubmitButton.stories.ts",
+      "stories/WelcomeCard.stories.ts",
+      "node_modules/.pnpm/@storybook+vue3@8.0.8_vue@3.5.12_typescript@5.6.3_/node_modules/@storybook/vue3/dist/entry-preview.mjs",
+      "node_modules/.pnpm/@storybook+vue3@8.0.8_vue@3.5.12_typescript@5.6.3_/node_modules/@storybook/vue3/dist/entry-preview-docs.mjs",
+      "node_modules/.pnpm/@storybook-vue+nuxt@0.2.6_@types+node@18.19.55_magicast@0.3.5_nuxt@3.11.2_@parcel+watcher@2.4_5kruepod2mlee2lhsvociwczsy/node_modules/@storybook-vue/nuxt/dist/preview.mjs",
+      "node_modules/.pnpm/@storybook+addon-actions@8.3.5_storybook@8.3.5/node_modules/@storybook/addon-actions/dist/preview.mjs",
+      "node_modules/.pnpm/@storybook+addon-links@8.0.8_react@18.3.1/node_modules/@storybook/addon-links/dist/preview.js",
+      "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/docs/preview.js",
+      "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/backgrounds/preview.js",
+      "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/viewport/preview.js",
+      "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/measure/preview.js",
+      "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/outline/preview.js",
+      "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/highlight/preview.js",
+      "node_modules/.pnpm/@storybook+addon-interactions@8.0.8/node_modules/@storybook/addon-interactions/dist/preview.js",
+      ".storybook/preview.ts"
+    ]
+  },
+  "node_modules/.pnpm/@mdx-js+react@3.0.1_@types+react@18.3.11_react@18.3.1/node_modules/@mdx-js/react/index.js": {
+    "file": "_nuxt/HfMbx88V.js",
+    "name": "index",
+    "src": "node_modules/.pnpm/@mdx-js+react@3.0.1_@types+react@18.3.11_react@18.3.1/node_modules/@mdx-js/react/index.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_DyM18_-h.js",
+      "_DoU5TKlD.js",
+      "iframe.html",
+      "_BVDQJRw6.js",
+      "_CVPIwebV.js",
+      "_DrFu-skq.js"
+    ]
+  },
+  "node_modules/.pnpm/@nuxt+ui-templates@1.3.4/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
+    "file": "_nuxt/BpBQLs7T.js",
+    "name": "error-404",
+    "src": "node_modules/.pnpm/@nuxt+ui-templates@1.3.4/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_CpPJmdYN.js",
+      "_Dtb5mkr6.js",
+      "_D9rSyKX4.js",
+      "_BaXC8Uva.js",
+      "_DlAUqK2U.js",
+      "_B7IqD13D.js",
+      "iframe.html",
+      "_CbI4lzGV.js"
+    ],
+    "css": [
+      "_nuxt/error-404.B57H_zIO.css",
+      "_nuxt/main.ZJMYpaas.css"
+    ]
+  },
+  "node_modules/.pnpm/@nuxt+ui-templates@1.3.4/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
+    "file": "_nuxt/CynjgB18.js",
+    "name": "error-500",
+    "src": "node_modules/.pnpm/@nuxt+ui-templates@1.3.4/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_BaXC8Uva.js",
+      "_CpPJmdYN.js",
+      "_DlAUqK2U.js",
+      "_B7IqD13D.js"
+    ],
+    "css": [
+      "_nuxt/error-500.oPsOm33s.css"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+addon-actions@8.3.5_storybook@8.3.5/node_modules/@storybook/addon-actions/dist/preview.mjs": {
+    "file": "_nuxt/7DrC0_qt.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook+addon-actions@8.3.5_storybook@8.3.5/node_modules/@storybook/addon-actions/dist/preview.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_QcKjftir.js",
+      "_CVPIwebV.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+addon-docs@8.0.8_webpack-sources@3.2.3/node_modules/@storybook/addon-docs/dist/DocsRenderer-K4EAMTCU.mjs": {
+    "file": "_nuxt/J2WgrXtJ.js",
+    "name": "DocsRenderer-K4EAMTCU",
+    "src": "node_modules/.pnpm/@storybook+addon-docs@8.0.8_webpack-sources@3.2.3/node_modules/@storybook/addon-docs/dist/DocsRenderer-K4EAMTCU.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "iframe.html",
+      "_DoU5TKlD.js",
+      "_BVDQJRw6.js",
+      "_CVPIwebV.js",
+      "_DrFu-skq.js"
+    ],
+    "dynamicImports": [
+      "node_modules/.pnpm/@mdx-js+react@3.0.1_@types+react@18.3.11_react@18.3.1/node_modules/@mdx-js/react/index.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/backgrounds/preview.js": {
+    "file": "_nuxt/D68SW1y7.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/backgrounds/preview.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_DrFu-skq.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/docs/preview.js": {
+    "file": "_nuxt/C_zBusya.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/docs/preview.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "iframe.html"
+    ],
+    "dynamicImports": [
+      "node_modules/.pnpm/@storybook+addon-docs@8.0.8_webpack-sources@3.2.3/node_modules/@storybook/addon-docs/dist/DocsRenderer-K4EAMTCU.mjs"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/highlight/preview.js": {
+    "file": "_nuxt/Cv3rAi2i.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/highlight/preview.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/measure/preview.js": {
+    "file": "_nuxt/Db4Idchh.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/measure/preview.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/outline/preview.js": {
+    "file": "_nuxt/BdcSJN-P.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/outline/preview.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_DrFu-skq.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/viewport/preview.js": {
+    "file": "_nuxt/B4GcaC1c.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook+addon-essentials@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1_webpack-sources@3.2.3/node_modules/@storybook/addon-essentials/dist/viewport/preview.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/.pnpm/@storybook+addon-interactions@8.0.8/node_modules/@storybook/addon-interactions/dist/preview.js": {
+    "file": "_nuxt/922eHqm8.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook+addon-interactions@8.0.8/node_modules/@storybook/addon-interactions/dist/preview.js",
+    "isDynamicEntry": true
+  },
+  "node_modules/.pnpm/@storybook+addon-links@8.0.8_react@18.3.1/node_modules/@storybook/addon-links/dist/preview.js": {
+    "file": "_nuxt/DrGCpzH6.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook+addon-links@8.0.8_react@18.3.1/node_modules/@storybook/addon-links/dist/preview.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_CVPIwebV.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+blocks@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/blocks/dist/Color-RQJUDNI5.mjs": {
+    "file": "_nuxt/BI_3v2Yf.js",
+    "name": "Color-RQJUDNI5",
+    "src": "node_modules/.pnpm/@storybook+blocks@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/blocks/dist/Color-RQJUDNI5.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_DoU5TKlD.js",
+      "_BVDQJRw6.js",
+      "iframe.html",
+      "_CVPIwebV.js",
+      "_DrFu-skq.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/WithTooltip-Y7J54OF7.mjs": {
+    "file": "_nuxt/NiyE1GXH.js",
+    "name": "WithTooltip-Y7J54OF7",
+    "src": "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/WithTooltip-Y7J54OF7.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_DoU5TKlD.js",
+      "iframe.html",
+      "_BVDQJRw6.js",
+      "_CVPIwebV.js",
+      "_DrFu-skq.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/formatter-B5HCVTEV.mjs": {
+    "file": "_nuxt/00NI4dYb.js",
+    "name": "formatter-B5HCVTEV",
+    "src": "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/formatter-B5HCVTEV.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_DoU5TKlD.js",
+      "iframe.html",
+      "_BVDQJRw6.js",
+      "_CVPIwebV.js",
+      "_DrFu-skq.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/syntaxhighlighter-JOJW2KGS.mjs": {
+    "file": "_nuxt/BmdkvvLT.js",
+    "name": "syntaxhighlighter-JOJW2KGS",
+    "src": "node_modules/.pnpm/@storybook+components@8.0.8_@types+react@18.3.11_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@storybook/components/dist/syntaxhighlighter-JOJW2KGS.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_DoU5TKlD.js",
+      "iframe.html",
+      "_BVDQJRw6.js",
+      "_CVPIwebV.js",
+      "_DrFu-skq.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+vue3@8.0.8_vue@3.5.12_typescript@5.6.3_/node_modules/@storybook/vue3/dist/entry-preview-docs.mjs": {
+    "file": "_nuxt/Bg04lmNA.js",
+    "name": "entry-preview-docs",
+    "src": "node_modules/.pnpm/@storybook+vue3@8.0.8_vue@3.5.12_typescript@5.6.3_/node_modules/@storybook/vue3/dist/entry-preview-docs.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_BVDQJRw6.js",
+      "_CpPJmdYN.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook+vue3@8.0.8_vue@3.5.12_typescript@5.6.3_/node_modules/@storybook/vue3/dist/entry-preview.mjs": {
+    "file": "_nuxt/X3Qlk1oj.js",
+    "name": "entry-preview",
+    "src": "node_modules/.pnpm/@storybook+vue3@8.0.8_vue@3.5.12_typescript@5.6.3_/node_modules/@storybook/vue3/dist/entry-preview.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "_CpPJmdYN.js"
+    ]
+  },
+  "node_modules/.pnpm/@storybook-vue+nuxt@0.2.6_@types+node@18.19.55_magicast@0.3.5_nuxt@3.11.2_@parcel+watcher@2.4_5kruepod2mlee2lhsvociwczsy/node_modules/@storybook-vue/nuxt/dist/preview.mjs": {
+    "file": "_nuxt/BKsIn95Z.js",
+    "name": "preview",
+    "src": "node_modules/.pnpm/@storybook-vue+nuxt@0.2.6_@types+node@18.19.55_magicast@0.3.5_nuxt@3.11.2_@parcel+watcher@2.4_5kruepod2mlee2lhsvociwczsy/node_modules/@storybook-vue/nuxt/dist/preview.mjs",
+    "isDynamicEntry": true,
+    "imports": [
+      "iframe.html"
+    ],
+    "dynamicImports": [
+      "_Dtb5mkr6.js"
+    ]
+  },
+  "pages/home/index.vue": {
+    "file": "_nuxt/CmXNAl2a.js",
+    "name": "index",
+    "src": "pages/home/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_CsZsf3Vu.js",
+      "_CpPJmdYN.js",
+      "_Dm1bvDNI.js",
+      "_ZlAkEr69.js",
+      "_CbI4lzGV.js",
+      "_DlAUqK2U.js",
+      "_Cs9wVCFg.js",
+      "_VU8wUJ6S.js",
+      "_Ccq5cmq1.js",
+      "_D9rSyKX4.js"
+    ]
+  },
+  "pages/login/index.vue": {
+    "file": "_nuxt/h7FBwYbl.js",
+    "name": "index",
+    "src": "pages/login/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_CsZsf3Vu.js",
+      "_B3b0gWGo.js",
+      "_68YM6oYl.js",
+      "_CpPJmdYN.js",
+      "_ZlAkEr69.js",
+      "_Dm1bvDNI.js",
+      "_DlAUqK2U.js",
+      "_Cs9wVCFg.js",
+      "_VU8wUJ6S.js",
+      "_Ccq5cmq1.js",
+      "_D9rSyKX4.js",
+      "_CbI4lzGV.js"
+    ]
+  },
+  "public/file_input.png": {
+    "file": "_nuxt/file_input.BnUbZXmy.png",
+    "src": "public/file_input.png"
+  },
+  "public/logo.png": {
+    "file": "_nuxt/logo.ChQ3biW9.png",
+    "src": "public/logo.png"
+  },
+  "stories/Configure.mdx": {
+    "file": "_nuxt/CtorT9X1.js",
+    "name": "Configure",
+    "src": "stories/Configure.mdx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_DoU5TKlD.js",
+      "_DyM18_-h.js",
+      "_D9rSyKX4.js",
+      "iframe.html",
+      "_BVDQJRw6.js",
+      "_CVPIwebV.js",
+      "_DrFu-skq.js"
+    ],
+    "assets": [
+      "_nuxt/typography.Y5Vss3yI.svg",
+      "_nuxt/styling.Cu3L8C3X.jpg",
+      "_nuxt/context.zn4AIyQW.jpg",
+      "_nuxt/assets.DMue63Xw.jpg"
+    ]
+  },
+  "stories/MyNuxtWelcome.stories.ts": {
+    "file": "_nuxt/CVjIjXnI.js",
+    "name": "MyNuxtWelcome.stories",
+    "src": "stories/MyNuxtWelcome.stories.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_BaXC8Uva.js",
+      "_CpPJmdYN.js",
+      "_DlAUqK2U.js",
+      "_B7IqD13D.js"
+    ],
+    "css": [
+      "_nuxt/MyNuxtWelcome.D4ThOque.css"
+    ]
+  },
+  "stories/SignInForm.stories.ts": {
+    "file": "_nuxt/BYxXhCJD.js",
+    "name": "SignInForm.stories",
+    "src": "stories/SignInForm.stories.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_CsZsf3Vu.js",
+      "_ZlAkEr69.js",
+      "_Dm1bvDNI.js",
+      "_CpPJmdYN.js",
+      "_DlAUqK2U.js",
+      "_Cs9wVCFg.js",
+      "_VU8wUJ6S.js",
+      "_Ccq5cmq1.js",
+      "_D9rSyKX4.js",
+      "_CbI4lzGV.js"
+    ]
+  },
+  "stories/SignUpConfirmation.stories.ts": {
+    "file": "_nuxt/e27wvqZ0.js",
+    "name": "SignUpConfirmation.stories",
+    "src": "stories/SignUpConfirmation.stories.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_68YM6oYl.js",
+      "_CpPJmdYN.js",
+      "_ZlAkEr69.js",
+      "_Ccq5cmq1.js",
+      "_D9rSyKX4.js",
+      "_CbI4lzGV.js",
+      "_DlAUqK2U.js"
+    ]
+  },
+  "stories/SignUpForm.stories.ts": {
+    "file": "_nuxt/DLDIwYd5.js",
+    "name": "SignUpForm.stories",
+    "src": "stories/SignUpForm.stories.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_B3b0gWGo.js",
+      "_Dm1bvDNI.js",
+      "_CpPJmdYN.js",
+      "_ZlAkEr69.js",
+      "_CbI4lzGV.js",
+      "_DlAUqK2U.js",
+      "_D9rSyKX4.js"
+    ]
+  },
+  "stories/SocialLinks.stories.ts": {
+    "file": "_nuxt/Cj467Goo.js",
+    "name": "SocialLinks.stories",
+    "src": "stories/SocialLinks.stories.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Cs9wVCFg.js",
+      "_QcKjftir.js",
+      "_CpPJmdYN.js",
+      "_CVPIwebV.js"
+    ]
+  },
+  "stories/SubmitButton.stories.ts": {
+    "file": "_nuxt/BxncntcZ.js",
+    "name": "SubmitButton.stories",
+    "src": "stories/SubmitButton.stories.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_ZlAkEr69.js",
+      "_CpPJmdYN.js",
+      "_CbI4lzGV.js",
+      "_DlAUqK2U.js"
+    ]
+  },
+  "stories/WelcomeCard.stories.ts": {
+    "file": "_nuxt/B71wjWpR.js",
+    "name": "WelcomeCard.stories",
+    "src": "stories/WelcomeCard.stories.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_VU8wUJ6S.js",
+      "_CpPJmdYN.js",
+      "_Ccq5cmq1.js",
+      "_D9rSyKX4.js",
+      "_DlAUqK2U.js"
+    ]
+  },
+  "stories/assets/assets.jpg": {
+    "file": "_nuxt/assets.DMue63Xw.jpg",
+    "src": "stories/assets/assets.jpg"
+  },
+  "stories/assets/context.jpg": {
+    "file": "_nuxt/context.zn4AIyQW.jpg",
+    "src": "stories/assets/context.jpg"
+  },
+  "stories/assets/styling.jpg": {
+    "file": "_nuxt/styling.Cu3L8C3X.jpg",
+    "src": "stories/assets/styling.jpg"
+  },
+  "stories/assets/typography.svg": {
+    "file": "_nuxt/typography.Y5Vss3yI.svg",
+    "src": "stories/assets/typography.svg"
+  }
+}

@@ -5,7 +5,7 @@
             <WelcomeCard />
         </div>
 
-        <p class="w-full text-center text-sm font-semibold">
+        <p class="w-full text-center text-sm font-semibold" data-test="sign_in-info">
             Enter your email
         </p>
         <!-- Email Form -->
@@ -17,9 +17,10 @@
                     placeholder="Email Address" 
                     :prefix-icon="Message"
                     :error="authStore.errors.Email"
-                    @input="updateEmail" 
+                    @input="updateEmail"
+                    data-test="sign_in-input"
                 />
-                <p v-if="authStore.errors.Email" class="text-red-500 text-xs">{{ authStore.errors.Email }}</p>
+                <p v-if="authStore.errors.Email" class="text-red-500 text-xs" data-test="sign_in-error">{{ authStore.errors.Email }}</p>
                 <SubmitButton :handle-click="handleSubmit" />
             </div>
         </div>
@@ -32,14 +33,14 @@
         </div>
 
         <!-- Social Login Buttons -->
-        <div class="space-y-4">
+        <div class="space-y-4" data-test="sign_in-socials">
             <SocialLinks :svg="GoogleIcon" text="Continue with Google&nbsp;&nbsp;&nbsp;&nbsp;" @click="handleSocialClick(1)" />
             <SocialLinks :svg="FaceBookIcon" text="Continue with Facebook" @click="handleSocialClick(2)" />
             <SocialLinks :svg="AppleIcon" text="Continue with Apple&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" @click="handleSocialClick(3)" />
         </div>
 
         <!-- Terms and Conditions -->
-        <p class="text-center text-sm text-gray-500">
+        <p class="text-center text-sm text-gray-500" data-test="sign_in-terms">
             <a href="#" class="hover:text-gray-400 cursor-pointer text-center text-white/40">Terms & Conditions</a>
         </p>
     </div>

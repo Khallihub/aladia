@@ -24,12 +24,12 @@
             </div>
 
             <div>
-                <h5 class="mb-1 text-sm font-semibold">Nice to meet you,</h5>
-                <p class="text-xs text-white/70">Upload a profile picture and complete your presentation</p>
+                <h5 class="mb-1 text-sm font-semibold" data-test="sign_up-greet">Nice to meet you,</h5>
+                <p class="text-xs text-white/70" data-test="sign_up-info">Upload a profile picture and complete your presentation</p>
             </div>
         </div>
 
-        <div class="mb-6 text-xs text-white/70">
+        <div class="mb-6 text-xs text-white/70" data-test="sign_up-terms">
             <label class="flex items-center">
                 <div class="flex h-4 w-4 cursor-pointer items-center justify-center rounded border pt-0.5 transition-all border-white/50 hover:border-white">
                     <i class="fa-solid fa-check tex-sm"></i>
@@ -41,7 +41,7 @@
             </label>
         </div>
 
-        <p class="mb-4 text-center text-xs">Enter your details </p>
+        <p class="mb-4 text-center text-xs" data-test="sign_up-command">Enter your details</p>
 
         <div class="space-y-3 w-full">
             <div class="w-full">
@@ -52,8 +52,9 @@
                     :prefix-icon="User" 
                     @focus="touchedName = true"
                     @input="resetError('Name')" 
+                    data-test="sign_up-name-input"
                 />
-                <p v-if="touchedName && authStore.errors.Name" class="text-red-500 text-xs">{{ authStore.errors.Name }}</p>
+                <p v-if="touchedName && authStore.errors.Name" class="text-red-500 text-xs" data-test="sign_up-name-input-error">{{ authStore.errors.Name }}</p>
             </div>
 
             <div>
@@ -64,8 +65,9 @@
                     :prefix-icon="User" 
                     @focus="touchedSurname = true"
                     @input="resetError('Surname')" 
+                    data-test="sign_up-surname-input"
                 />
-                <p v-if="touchedSurname && authStore.errors.Surname" class="text-red-500 text-xs">{{ authStore.errors.Surname }}</p>
+                <p v-if="touchedSurname && authStore.errors.Surname" class="text-red-500 text-xs" data-test="sign_up-surname-input-error">{{ authStore.errors.Surname }}</p>
             </div>
 
             <div>
@@ -76,8 +78,10 @@
                     :prefix-icon="Message" 
                     @focus="touchedEmail = true"
                     @input="resetError('Email')" 
+                    data-test="sign_up-email-input"
+
                 />
-                <p v-if="touchedEmail && authStore.errors.Email" class="text-red-500 text-xs">{{ authStore.errors.Email }}</p>
+                <p v-if="touchedEmail && authStore.errors.Email" class="text-red-500 text-xs" data-test="sign_up-email-input-error">{{ authStore.errors.Email }}</p>
             </div>
 
             <div>
@@ -88,8 +92,10 @@
                     :prefix-icon="Key" 
                     @focus="touchedPassword = true"
                     @input="resetError('Password')" 
+                    data-test="sign_up-password-input"
+
                 />
-                <p v-if="touchedPassword && authStore.errors.Password" class="text-red-500 text-xs">{{ authStore.errors.Password }}</p>
+                <p v-if="touchedPassword && authStore.errors.Password" class="text-red-500 text-xs" data-test="sign_up-password-input-error">{{ authStore.errors.Password }}</p>
             </div>
 
             <div>
@@ -100,15 +106,17 @@
                     :prefix-icon="Key" 
                     @focus="touchedConfirmPassword = true"
                     @input="resetError('ConfirmPassword')" 
+                    data-test="sign_up-confirm_password-input"
+
                 />
-                <p v-if="touchedConfirmPassword && authStore.errors.ConfirmPassword" class="text-red-500 text-xs">{{ authStore.errors.ConfirmPassword }}</p>
+                <p v-if="touchedConfirmPassword && authStore.errors.ConfirmPassword" class="text-red-500 text-xs" data-test="sign_up-confirm_password-input-error">{{ authStore.errors.ConfirmPassword }}</p>
             </div>
         </div>
 
         <SubmitButton :handle-click="handleClick" />
 
         <p class="text-center text-sm text-gray-500 mb-1">
-            <a href="#" class="hover:text-gray-400 cursor-pointer text-center text-white/40">Terms & Conditions</a>
+            <a href="#" class="hover:text-gray-400 cursor-pointer text-center text-white/40" data-test="sign_up-terms-link">Terms & Conditions</a>
         </p>
     </div>
 </template>
