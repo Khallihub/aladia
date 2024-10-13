@@ -19,7 +19,7 @@
                 @change="previewImage" />
 
             <div class="w-1/2 border border-white flex justify-center items-center rounded-md">
-                <img id="profileImage" src="/public/file_input.png" alt="Profile Picture"
+                <img id="profileImage" src="/file_input.png" alt="Profile Picture"
                     class="cursor-pointer w-24 h-24" />
             </div>
 

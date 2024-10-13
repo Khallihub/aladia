@@ -69,7 +69,6 @@ import AppleIcon from '~/assets/Icons/SocialIcons/AppleIcon.vue';
 import FaceBookIcon from '~/assets/Icons/SocialIcons/FaceBookIcon.vue';
 import GoogleIcon from '~/assets/Icons/SocialIcons/GoogleIcon.vue';
 import { Message, Key } from '@element-plus/icons-vue';
-import WelcomeCard from '~/components/Atoms/WelcomeCard.vue';
 import { useAuthStore } from '~/stores/AuthStore';
 
 const authStore = useAuthStore();
@@ -109,7 +108,7 @@ const handleSubmit = async () => {
     }
     await new Promise((resolve) => setTimeout(resolve, 1000));
     authStore.toggleLoading(); 
-    if (authStore.users.has(authStore.Email)) {
+    if (authStore.users[authStore.Email]) {
         authStore.existingUser = true;
     } else {
         authStore.changePage();

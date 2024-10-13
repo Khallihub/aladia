@@ -29,7 +29,7 @@ export const useAuthStore = defineStore('auth', () => {
     Password: false,
     ConfirmPassword: false
   })
-  const users = ref(new Map())
+  const users = ref({})
 
   const toggleLoading = () => {
     loading.value = !loading.value;
@@ -63,7 +63,7 @@ export const useAuthStore = defineStore('auth', () => {
     }
   };
   const checkPassword = () => {
-    return users.value.get(Email.value) === OldPassword.value ? true : false;
+    return users.value[Email.value] === OldPassword.value;
   }
 
   return {

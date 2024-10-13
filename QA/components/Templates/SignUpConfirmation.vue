@@ -3,7 +3,7 @@
     <div class="shadow-xl flex flex-col justify-start text-center w-full h-full mb-auto">
         <div class="flex flex-col items-center mb-6 h-fit">
             <div class="rounded-full mb-4 flex items-center justify-center">
-                <img src="/public/logo.png" alt="Aladia Logo" class="w-1/2 object-cover" />
+                <img src="/logo.png" alt="Aladia Logo" class="w-1/2 object-cover" />
             </div>
             <h2 class=" text-lg font-semibold text-white" data-test="sign_con-name">{{`${authStore.Name} ${authStore.Surname}`}}</h2>
         </div>
@@ -30,12 +30,12 @@ import { useAuthStore } from '~/stores/AuthStore';
 const authStore = useAuthStore();
 
 const handleClick = async () => {
-    authStore.toggleLoading(); 
+    authStore.toggleLoading();
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    authStore.users.set(authStore.Email, authStore.Password);
+    authStore.users[authStore.Email] = authStore.Password;
     authStore.page = 0;
     authStore.confirmEmail = false;
-    authStore.toggleLoading(); 
+    authStore.toggleLoading();
 };
 
 </script>

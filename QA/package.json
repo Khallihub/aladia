@@ -25,9 +25,6 @@
   "devDependencies": {
     "@chromatic-com/cypress": "^0.8.0",
     "@chromatic-com/storybook": "^2.0.2",
-    "@fortawesome/free-brands-svg-icons": "^6.6.0",
-    "@fortawesome/free-regular-svg-icons": "^6.6.0",
-    "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@nuxtjs/storybook": "7.0.2",
     "@storybook-vue/nuxt": "0.2.6",
     "@storybook/addon-actions": "^8.3.5",
