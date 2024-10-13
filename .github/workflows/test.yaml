@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - Khalid-Abdu
+      - main
   pull_request:
     branches:
       - main
@@ -17,7 +17,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3 
       with:
-        ref: ${{ github.ref }}
+        ref: ${{ github.event.pull_request.head.ref }}
         fetch-depth: 0
 
     # Step 2: Set up Node.js
