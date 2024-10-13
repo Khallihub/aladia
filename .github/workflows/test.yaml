@@ -35,6 +35,7 @@ jobs:
     # Step 4: Run the build
     - name: Run the project
       run: |
+        cd QA
         pnpm run dev &
       
     - name: Wait for the Nuxt.js server to be ready
@@ -42,12 +43,15 @@ jobs:
         sleep 20
     - name: visual regression test at component level chromatic + storybook
       run: |
+        cd QA
         pnpx chromatic --project-token=chpt_d65e7e87774763d
 
     - name: end-to-end test (for functionality) cypress tests created through cypress studio
       run: | 
+        cd QA
         ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpx cypress run
 
     - name: full-page visual regression test 
       run: |
+        cd QA
          pnpx chromatic --cypress -t=chpt_d65e7e87774763d
