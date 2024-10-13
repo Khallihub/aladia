@@ -11,6 +11,9 @@
           <div v-if="authStore.confirmEmail">
             <TemplatesSignUpConfirmation />
           </div>
+          <div v-if="authStore.page === 2">
+            <TemplatesWelcome />
+          </div>
         </div>
       </div>
     </ClientOnly>
@@ -22,10 +25,3 @@
   const authStore = useAuthStore(); 
 
   </Script>
-  
-
-  
-  <style lang="">
-  /* You can add any specific styles here */
-  </style>
-  

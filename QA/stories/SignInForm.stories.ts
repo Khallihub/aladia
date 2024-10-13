@@ -11,6 +11,9 @@ const Template: StoryFn<typeof SignInForm> = () => ({
   components: { SignInForm },
   setup() {
     const authStore = useAuthStore();
+    authStore.existingUser = false;
+    authStore.incorrectPassword = false;
+    authStore.users = new Map();
 
     const handleSocialClick = (id: number) => {
       console.log('Social login clicked:', id);
@@ -18,7 +21,7 @@ const Template: StoryFn<typeof SignInForm> = () => ({
 
     const updateEmail = (value: string) => {
       authStore.Email = value;
-      authStore.errors.Email = ''; 
+      authStore.errors.Email = '';
     };
 
     const handleSubmit = () => {
@@ -54,6 +57,29 @@ Filled.play = () => {
 export const InvalidEmail = Template.bind({});
 InvalidEmail.play = () => {
   const authStore = useAuthStore();
-  authStore.Email = 'invalid-email'; // Invalid email
-  authStore.errors.Email = 'Invalid email format'; // Error message for invalid email
+  authStore.Email = 'test.com'; // Invalid email
+  authStore.errors.Email = 'Invalid email'; // Error message for invalid email
 };
+
+// login Story: Existing user, with correct password
+export const Login = Template.bind({});
+Login.play = () => {
+  const authStore = useAuthStore();
+  authStore.Email = 'khalid@gmail.com'
+  authStore.existingUser = true;
+  authStore.incorrectPassword = false;
+  authStore.users.set('khalid@gmail.com', '123456');
+  authStore.OldPassword = '123456';
+  console.log(authStore)
+}
+
+// login Story: Existing user, with incorrect password
+export const WrongLogin = Template.bind({});
+WrongLogin.play = () => {
+  const authStore = useAuthStore();
+  authStore.Email = 'abdu@gmail.com'
+  authStore.existingUser = true;
+  authStore.incorrectPassword = true;
+  authStore.users.set('abdu@gmail.com', '654321');
+  authStore.OldPassword = '123456';
+}

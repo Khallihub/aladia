@@ -29,14 +29,13 @@ import { useAuthStore } from '~/stores/AuthStore';
 
 const authStore = useAuthStore();
 
-const handleClick = () => {
-    if (confirmationCode.value.join('').length === 6) {
-        // Proceed with confirmation
-        console.log("Confirmation Code Submitted: ", confirmationCode.join(''));
-    } else {
-        // Handle error (e.g., show a message)
-        console.log("Please complete the confirmation code.");
-    }
+const handleClick = async () => {
+    authStore.toggleLoading(); 
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    authStore.users.set(authStore.Email, authStore.Password);
+    authStore.page = 0;
+    authStore.confirmEmail = false;
+    authStore.toggleLoading(); 
 };
 
 </script>

@@ -8,15 +8,19 @@ export const useAuthStore = defineStore('auth', () => {
   const Surname = ref('');
   const Email = ref('');
   const Password = ref('');
+  const OldPassword = ref('');
   const ConfirmPassword = ref('');
   const confirmEmail = ref(false);
   const confirmationCode = ref(["", "", "", "", "", ""]);
+  const existingUser = ref(false);
+  const incorrectPassword = ref(false);
   const errors = ref({
     Name: '',
     Surname: '',
     Email: '',
-    Password:  '',
-    ConfirmPassword: ''
+    Password: '',
+    ConfirmPassword: '',
+    OldPassword: ''
   });
   const touched = ref({
     Name: false,
@@ -25,6 +29,7 @@ export const useAuthStore = defineStore('auth', () => {
     Password: false,
     ConfirmPassword: false
   })
+  const users = ref(new Map())
 
   const toggleLoading = () => {
     loading.value = !loading.value;
@@ -42,7 +47,7 @@ export const useAuthStore = defineStore('auth', () => {
     errors.value = {
       Name: Name.value ? null : 'Name is required',
       Surname: Surname.value ? null : 'Surname is required',
-      Email: validateEmail(), 
+      Email: validateEmail(),
       Password: Password.value.length >= 6 ? null : 'Password must be at least 6 characters',
       ConfirmPassword: Password.value === ConfirmPassword.value ? null : 'Passwords do not match',
     };
@@ -57,6 +62,9 @@ export const useAuthStore = defineStore('auth', () => {
       return 'Invalid email'; // Error message
     }
   };
+  const checkPassword = () => {
+    return users.value.get(Email.value) === OldPassword.value ? true : false;
+  }
 
   return {
     loading,
@@ -65,6 +73,7 @@ export const useAuthStore = defineStore('auth', () => {
     Surname,
     Email,
     Password,
+    OldPassword,
     ConfirmPassword,
     confirmEmail,
     errors,
@@ -73,7 +82,11 @@ export const useAuthStore = defineStore('auth', () => {
     confirmEmailPage,
     validate,
     validateEmail,
+    checkPassword,
     confirmationCode,
-    touched
+    touched,
+    users,
+    existingUser,
+    incorrectPassword
   };
 });
