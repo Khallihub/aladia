@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "storybook": "storybook dev --port 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@element-plus/nuxt": "^1.0.10",
