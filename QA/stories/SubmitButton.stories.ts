@@ -7,7 +7,7 @@ export default {
   component: SubmitButton,
 } as Meta<typeof SubmitButton>;
 
-const Template: StoryFn<typeof SubmitButton> = (args) => ({
+const Template: StoryFn<typeof SubmitButton> = (args: any) => ({
   components: { SubmitButton },
   setup() {
     const authStore = useAuthStore();
@@ -27,7 +27,7 @@ Default.args = {};
 
 // Loading Story: Button in loading state
 export const Loading = Template.bind({});
-Loading.play = async ({ args }) => {
+Loading.play = async ({ args }: {args: any}) => {
   const authStore = useAuthStore();
   authStore.loading = true;
 };
