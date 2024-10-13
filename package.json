@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare",
     "storybook": "storybook dev --port 6006",
     "build-storybook": "storybook build",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "chromatic": "chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
+
   },
   "dependencies": {
     "@element-plus/nuxt": "^1.0.10",
