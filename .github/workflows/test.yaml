@@ -6,7 +6,7 @@ on:
       - "**"
 
 jobs:
-  e2e_visual_regression:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -42,3 +42,9 @@ jobs:
         run: ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpm run chromatic --cypress --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
         env:
           CHROMATIC_PROJECT_TOKEN: "chpt_d65e7e87774763d"
+          
+      - name: visual regression test at component level chromatic + storybook
+        run: |
+          pnpx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN
+        env:
+            CHROMATIC_PROJECT_TOKEN: "chpt_d65e7e87774763d"
