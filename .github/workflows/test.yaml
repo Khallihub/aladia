@@ -46,11 +46,11 @@ jobs:
           echo "Waiting for the server to be ready..."
           sleep 10 
         done
-    - name: visual regression test at component level: chromatic + storybook
+    - name: visual regression test at component level chromatic + storybook
       run: |
         pnpx chromatic --project-token=chpt_d65e7e87774763d
 
-    - name: end-to-end test (for functionality): cypress tests created through cypress studio
+    - name: end-to-end test (for functionality) cypress tests created through cypress studio
       run: | 
         ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpx cypress run
 
