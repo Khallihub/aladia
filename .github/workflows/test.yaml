@@ -33,20 +33,13 @@ jobs:
         pnpm install
 
     # Step 4: Run the build
-    - name: Build the project
+    - name: Run the project
       run: |
         pnpm run dev &
       
     - name: Wait for the Nuxt.js server to be ready
       run: |
-        for i in {1..10}; do
-          if curl --silent --head http://127.0.0.1:3000/ | grep "200 OK" > /dev/null; then
-            echo "Nuxt.js server is up!"
-            break
-          fi
-          echo "Waiting for the server to be ready..."
-          sleep 10 
-        done
+        sleep 20
     - name: visual regression test at component level chromatic + storybook
       run: |
         pnpx chromatic --project-token=chpt_d65e7e87774763d
