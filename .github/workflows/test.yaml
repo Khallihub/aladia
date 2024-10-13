@@ -37,12 +37,11 @@ jobs:
     - name: Build the project
       run: |
         cd QA
-        pnpm run dev
+        pnpm run dev &
       
     - name: Wait for the Nuxt.js server to be ready
       run: |
-        pnpx wait-on http://localhost:3000 --timeout 20000
-
+        sleep 30
 
     - name: visual regression test at component level chromatic + storybook
       run: |
