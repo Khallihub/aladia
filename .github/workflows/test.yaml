@@ -51,8 +51,7 @@ jobs:
     - name: cypress end-to-end tests
       run: | 
         cd QA
-        ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpx cypress run
-
+        ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 npm run cypress:run
     - name: full-page visual regression test 
       run: |
         cd QA
