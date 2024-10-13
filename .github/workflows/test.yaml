@@ -1,0 +1,59 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+
+  pull_request:
+    branches:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3 
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+
+    # Step 2: Set up Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.19.1'  # Set your preferred Node.js version
+
+    # Step 3: Install dependencies using pnpm
+    - name: Install dependencies
+      run: |
+        npm install -g pnpm
+        cd QA
+        pnpm install
+
+    # Step 4: Run the build
+    - name: Build the project
+      run: |
+        pnpm run dev &
+      
+    - name: Wait for the Nuxt.js server to be ready
+      run: |
+        for i in {1..10}; do
+          if curl --silent --head http://127.0.0.1:3000/ | grep "200 OK" > /dev/null; then
+            echo "Nuxt.js server is up!"
+            break
+          fi
+          echo "Waiting for the server to be ready..."
+          sleep 10 
+        done
+    - name: visual regression test at component level: chromatic + storybook
+      run: |
+        pnpx chromatic --project-token=chpt_d65e7e87774763d
+
+    - name: end-to-end test (for functionality): cypress tests created through cypress studio
+      run: | 
+        ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpx cypress run
+
+    - name: full-page visual regression test 
+      run: |
+         pnpx chromatic --cypress -t=chpt_d65e7e87774763d
