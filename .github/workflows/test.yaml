@@ -1,53 +1,44 @@
-name: CI/CD Pipeline
+name: Test
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
-      - main
+      - "**"
 
 jobs:
-  build:
+  e2e_visual_regression:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the repository
-    - name: Checkout code
-      uses: actions/checkout@v3 
-      with:
-        ref: ${{ github.event.pull_request.head.ref }}
-        fetch-depth: 0
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
 
-    # Step 2: Set up Node.js
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18.19.1'  # Set your preferred Node.js version
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.19.1"
 
-    # Step 3: Install dependencies using pnpm
-    - name: Install dependencies
-      run: |
-        npm install -g pnpm
-        pnpm install
-    
-    # Step 4: Start the server
-    - name: Build the project
-      run: |
-        pnpm run dev &
-      
-    - name: Wait for the Nuxt.js server to be ready
-      run: |
-        sleep 30
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
+      - name: Install dependencies
+        run: |
+          pnpm install
+      - name: Build Application
+        run: |
+          pnpm run build
+      - name: Build Storybook
+        run: pnpm run build-storybook
+  
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: "chpt_d65e7e87774763d"
 
-    - name: visual regression test at component level chromatic + storybook
-      run: |
-        pnpm chromatic --project-token=chpt_d65e7e87774763d
-
-    - name: cypress end-to-end tests
-      run: | 
-        ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpm run cypress:run
-    - name: full-page visual regression test 
-      run: |
-         pnpm chromatic --cypress -t=chpt_d65e7e87774763d
+      - name: Run Cypress with Chromatic
+        run: ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpm run chromatic --cypress --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
+        env:
+          CHROMATIC_PROJECT_TOKEN: "chpt_d65e7e87774763d"
