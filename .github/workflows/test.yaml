@@ -32,6 +32,11 @@ jobs:
         npm install -g pnpm
         cd QA
         pnpm install
+    
+    - name: Build the project
+      run: |
+        cd QA
+        pnpm run build
 
     # Step 4: Run the build
     - name: Run the project
