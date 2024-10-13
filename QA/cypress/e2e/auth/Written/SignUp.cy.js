@@ -1,7 +1,7 @@
     
 describe('Signup Flow', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3000/login');
+        cy.visit('http://127.0.0.1:3000/login');
     });
 
     it("sign in component check", () => {

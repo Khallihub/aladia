@@ -1,7 +1,7 @@
 /* ==== Test Created with Cypress Studio ==== */
 it('Sign up flow', function() {
   /* ==== Generated with Cypress Studio ==== */
-  cy.visit('http://localhost:3000/login');
+  cy.visit('http://127.0.0.1:3000/login');
   cy.wait(1000)
   cy.takeSnapshot()
   cy.get('[data-test="sign_in-input"]').clear('k');
