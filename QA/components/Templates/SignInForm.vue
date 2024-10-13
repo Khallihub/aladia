@@ -108,7 +108,7 @@ const handleSubmit = async () => {
     }
     await new Promise((resolve) => setTimeout(resolve, 1000));
     authStore.toggleLoading(); 
-    if (authStore.users[authStore.Email]) {
+    if (authStore.users.has(authStore.Email)) {
         authStore.existingUser = true;
     } else {
         authStore.changePage();

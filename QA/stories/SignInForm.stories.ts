@@ -13,7 +13,7 @@ const Template: StoryFn<typeof SignInForm> = () => ({
     const authStore = useAuthStore();
     authStore.existingUser = false;
     authStore.incorrectPassword = false;
-    authStore.users = {}
+    authStore.users = new Map();
 
     const handleSocialClick = (id: number) => {
       console.log('Social login clicked:', id);

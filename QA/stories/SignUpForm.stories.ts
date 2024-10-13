@@ -23,8 +23,10 @@ const Template: StoryFn<typeof SignUpForm> = () => ({
         Surname: '',
         Email: '',
         Password: '',
-        ConfirmPassword: ''
+        ConfirmPassword: '',
+        OldPassword: ''
       };
+
     };
 
     const handleClick = () => {
@@ -52,7 +54,8 @@ Default.play = () => {
     Surname: '',
     Email: '',
     Password: '',
-    ConfirmPassword: ''
+    ConfirmPassword: '',
+    OldPassword: ''
   };
 };
 
@@ -70,7 +73,8 @@ Filled.play = () => {
     Surname: '',
     Email: '',
     Password: '',
-    ConfirmPassword: ''
+    ConfirmPassword: '',
+    OldPassword: ''
   };
 };
 
@@ -88,7 +92,8 @@ InvalidEmail.play = () => {
     Surname: '',
     Email: 'Invalid email',
     Password: '',
-    ConfirmPassword: ''
+    ConfirmPassword: '',
+    OldPassword: ''
   };
   authStore.touched.Email = true;
 };
@@ -107,7 +112,8 @@ PasswordMismatch.play = () => {
     Surname: '',
     Email: '',
     Password: '',
-    ConfirmPassword: 'Passwords do not match'
+    ConfirmPassword: 'Passwords do not match',
+    OldPassword: ''
   };
   authStore.touched.ConfirmPassword = true;
 };
