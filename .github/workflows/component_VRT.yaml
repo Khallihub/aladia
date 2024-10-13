@@ -1,0 +1,45 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.19.1"
+
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
+      - name: Install dependencies
+        run: |
+          pnpm install
+      - name: Build Application
+        run: |
+          pnpm run build
+      - name: Build Storybook
+        run: pnpm run build-storybook
+  
+      - name: Run Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: "chpt_d65e7e87774763d"
+          
+      - name: visual regression test at component level chromatic + storybook
+        run: |
+          pnpx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN
+        env:
+            CHROMATIC_PROJECT_TOKEN: "chpt_d65e7e87774763d"
