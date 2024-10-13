@@ -33,12 +33,12 @@ jobs:
         cd QA
         pnpm install
     
+    # Step 4: Start the server
     - name: Build the project
       run: |
         cd QA
         pnpm run build
 
-    # Step 4: Run the build
     - name: Run the project
       run: |
         cd QA
@@ -46,7 +46,8 @@ jobs:
       
     - name: Wait for the Nuxt.js server to be ready
       run: |
-        sleep 20
+        pnpx wait-on http://localhost:3000 --timeout 10000
+
 
     - name: visual regression test at component level chromatic + storybook
       run: |
