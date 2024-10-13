@@ -30,13 +30,11 @@ jobs:
     - name: Install dependencies
       run: |
         npm install -g pnpm
-        cd QA
         pnpm install
     
     # Step 4: Start the server
     - name: Build the project
       run: |
-        cd QA
         pnpm run dev &
       
     - name: Wait for the Nuxt.js server to be ready
@@ -45,14 +43,11 @@ jobs:
 
     - name: visual regression test at component level chromatic + storybook
       run: |
-        cd QA
-        pnpx chromatic --project-token=chpt_d65e7e87774763d
+        pnpm chromatic --project-token=chpt_d65e7e87774763d
 
     - name: cypress end-to-end tests
       run: | 
-        cd QA
-        ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 npm run cypress:run
+        ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpm run cypress:run
     - name: full-page visual regression test 
       run: |
-        cd QA
-         pnpx chromatic --cypress -t=chpt_d65e7e87774763d
+         pnpm chromatic --cypress -t=chpt_d65e7e87774763d
