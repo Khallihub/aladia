@@ -37,12 +37,7 @@ jobs:
     - name: Build the project
       run: |
         cd QA
-        pnpm run build
-
-    - name: Run the project
-      run: |
-        cd QA
-        pnpm run preview
+        pnpm run dev
       
     - name: Wait for the Nuxt.js server to be ready
       run: |
