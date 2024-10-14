@@ -42,4 +42,4 @@ jobs:
         run: |
           pnpx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --force-rebuild
         env:
-            CHROMATIC_PROJECT_TOKEN: "chpt_51837bd955cf674"
+            CHROMATIC_PROJECT_TOKEN: "chpt_51837bd955cf674"  
