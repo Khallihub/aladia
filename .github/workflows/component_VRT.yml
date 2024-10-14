@@ -40,6 +40,6 @@ jobs:
           
       - name: visual regression test at component level chromatic + storybook
         run: |
-          pnpx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN
+          pnpx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --force-rebuild
         env:
             CHROMATIC_PROJECT_TOKEN: "chpt_51837bd955cf674"
