@@ -5,7 +5,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 ## Setup
 
 Make sure to install the dependencies:   
-
+  
 ```bash
 # npm
 npm install
@@ -20,7 +20,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+## Development Server  
 
 Start the development server on `http://localhost:3000`:
 
