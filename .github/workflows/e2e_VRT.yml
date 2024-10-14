@@ -36,9 +36,9 @@ jobs:
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          projectToken: "chpt_d65e7e87774763d"
+          projectToken: "chpt_51837bd955cf674"
 
       - name: Run Cypress with Chromatic
         run: ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpm run chromatic --cypress --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
         env:
-          CHROMATIC_PROJECT_TOKEN: "chpt_d65e7e87774763d"
+          CHROMATIC_PROJECT_TOKEN: "chpt_51837bd955cf674"

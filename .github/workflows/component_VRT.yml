@@ -36,10 +36,10 @@ jobs:
       - name: Run Chromatic
         uses: chromaui/action@latest
         with:
-          projectToken: "chpt_d65e7e87774763d"
+          projectToken: "chpt_51837bd955cf674"
           
       - name: visual regression test at component level chromatic + storybook
         run: |
           pnpx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN
         env:
-            CHROMATIC_PROJECT_TOKEN: "chpt_d65e7e87774763d"
+            CHROMATIC_PROJECT_TOKEN: "chpt_51837bd955cf674"
